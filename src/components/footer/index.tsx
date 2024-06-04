@@ -33,8 +33,10 @@ export function Footer() {
             <li>Orçamento</li>
           </ul>
         </div>
-        <div className="col-span-3 lg:col-span-1">
-          <h3 className="text-2xl font-bold text-white">Sos Construir</h3>
+        <div className="col-span-3 lg:col-span-1 lg:text-right">
+          <h3 className="text-2xl font-bold text-white">
+            Construtora SOS Construir
+          </h3>
           <span className="text-white">Foz do Iguaçu Paraná</span>
         </div>
       </div>
