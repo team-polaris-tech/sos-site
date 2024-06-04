@@ -1,4 +1,10 @@
-import { Facebook, Instagram, MapPin, MessageCircle } from 'lucide-react'
+import {
+  WhatsappLogo,
+  InstagramLogo,
+  FacebookLogo,
+  MapPin,
+} from '@phosphor-icons/react/dist/ssr'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -11,18 +17,34 @@ export function Footer() {
             para sua reforma e construção!
           </span>
           <div className="mt-2.5 flex items-center gap-2.5">
-            <div className="rounded border p-1.5  text-white">
-              <MessageCircle className="size-6" />
-            </div>
-            <div className="rounded border p-1.5  text-white">
-              <Facebook className="size-6" />
-            </div>
-            <div className="rounded border p-1.5  text-white">
-              <Instagram className="size-6" />
-            </div>
-            <div className="rounded border p-1.5  text-white">
+            <Link
+              href="/"
+              target="_blank"
+              className="rounded border p-1.5  text-white"
+            >
+              <WhatsappLogo className="size-6" />
+            </Link>
+            <Link
+              href="/"
+              target="_blank"
+              className="rounded border p-1.5  text-white"
+            >
+              <FacebookLogo className="size-6" />
+            </Link>
+            <Link
+              href="/"
+              target="_blank"
+              className="rounded border p-1.5  text-white"
+            >
+              <InstagramLogo className="size-6" />
+            </Link>
+            <Link
+              href="/"
+              target="_blank"
+              className="rounded border p-1.5  text-white"
+            >
               <MapPin className="size-6" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="col-span-3 lg:col-span-1">
