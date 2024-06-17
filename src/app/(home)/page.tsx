@@ -11,6 +11,7 @@ import {
   Gear,
 } from '@phosphor-icons/react/dist/ssr'
 import { TestimonyCarousel } from '@/components/testimony-carousel'
+import { RequestQuoteForm } from '@/components/request-quote-form'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -101,13 +102,17 @@ export default function Home() {
           description="Oferecemos uma garantia completa em todos os trabalhos realizados."
         />
       </section>
+      <RequestQuoteForm />
       <section className="flex flex-col items-center gap-2.5">
         <h2 className="text-4xl font-bold text-orange-500">
           Depoimentos SOS Construir
         </h2>
         <p className="text-xl text-neutral-500">
           Na SOS Construir, nosso objetivo é garantir clientes felizes e
-          satisfeitos. Junte-se a nós e faça parte dessa experiência de sucesso!
+          satisfeitos.
+        </p>
+        <p className="text-xl text-neutral-500">
+          Junte-se a nós e faça parte dessa experiência de sucesso!
         </p>
       </section>
       <TestimonyCarousel />

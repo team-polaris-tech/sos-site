@@ -1,3 +1,4 @@
+import { RequestQuoteForm } from '@/components/request-quote-form'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -5,5 +6,5 @@ export const metadata: Metadata = {
 }
 
 export default function Orcamento() {
-  return 'Hello'
+  return <RequestQuoteForm />
 }

@@ -8,6 +8,7 @@ export function Header() {
         <MenuLink href="/">Home</MenuLink>
         <MenuLink href="/services">Serviços</MenuLink>
         <MenuLink href="/products">Produtos</MenuLink>
+        <MenuLink href="/orcamento">Orçamento</MenuLink>
         <MenuLink href="/contact">Contato</MenuLink>
       </nav>
     </header>
