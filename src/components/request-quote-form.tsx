@@ -4,6 +4,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { Label } from './ui/label'
+import { Input } from './ui/input'
 
 const requestQuoteFormSchema = z.object({
   name: z.string().min(1, 'Nome é obrigatório'),
@@ -14,6 +16,7 @@ const requestQuoteFormSchema = z.object({
   quote: z.string().min(1, 'Selecione uma opção'),
   description: z.string().min(1, 'Descreva seu orçamento'),
 })
+
 type RequestQuoteFormSchema = z.infer<typeof requestQuoteFormSchema>
 
 export function RequestQuoteForm() {
@@ -44,10 +47,10 @@ export function RequestQuoteForm() {
         </p>
 
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="name" className="text-white lg:text-zinc-800">
+          <Label htmlFor="name" className="text-white lg:text-zinc-800">
             Nome
-          </label>
-          <input
+          </Label>
+          <Input
             id="name"
             type="text"
             {...register('name')}
@@ -57,10 +60,10 @@ export function RequestQuoteForm() {
           <span className="text-sm text-red-500">{errors.name?.message}</span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="name" className="text-white lg:text-zinc-800">
+          <Label htmlFor="email" className="text-white lg:text-zinc-800">
             E-mail
-          </label>
-          <input
+          </Label>
+          <Input
             id="email"
             type="text"
             {...register('email')}
@@ -70,10 +73,10 @@ export function RequestQuoteForm() {
           <span className="text-sm text-red-500">{errors.email?.message}</span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="phone" className="text-white lg:text-zinc-800">
+          <Label htmlFor="phone" className="text-white lg:text-zinc-800">
             Telefone (WhatsApp)
-          </label>
-          <input
+          </Label>
+          <Input
             id="phone"
             type="text"
             {...register('phone')}
@@ -83,9 +86,9 @@ export function RequestQuoteForm() {
           <span className="text-sm text-red-500">{errors.phone?.message}</span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="city" className="text-white lg:text-zinc-800">
+          <Label htmlFor="city" className="text-white lg:text-zinc-800">
             Cidade
-          </label>
+          </Label>
           <select
             id="city"
             {...register('city')}
@@ -97,10 +100,10 @@ export function RequestQuoteForm() {
           <span className="text-sm text-red-500">{errors.city?.message}</span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="address" className="text-white lg:text-zinc-800">
+          <Label htmlFor="address" className="text-white lg:text-zinc-800">
             Endereço
-          </label>
-          <input
+          </Label>
+          <Input
             id="address"
             type="text"
             {...register('address')}
@@ -112,9 +115,9 @@ export function RequestQuoteForm() {
           </span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="quote" className="text-white lg:text-zinc-800">
+          <Label htmlFor="quote" className="text-white lg:text-zinc-800">
             Orçamento para
-          </label>
+          </Label>
           <select
             id="quote"
             {...register('quote')}
@@ -126,9 +129,9 @@ export function RequestQuoteForm() {
           <span className="text-sm text-red-500">{errors.quote?.message}</span>
         </div>
         <div className="flex w-full flex-col gap-1">
-          <label htmlFor="description" className="text-white lg:text-zinc-800">
+          <Label htmlFor="description" className="text-white lg:text-zinc-800">
             Descreva seu orçamento
-          </label>
+          </Label>
           <textarea
             id="description"
             {...register('description')}
