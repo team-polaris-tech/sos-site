@@ -36,9 +36,8 @@ export default function Eletricista() {
     <>
       <FeatureDesktop />
       <FeatureMobile />
-      <br />
-      <section className="mx-auto flex max-w-screen-xl flex-col py-28">
-        <div className="flex flex-col items-center justify-center gap-20 pb-10 lg:flex-row">
+      <section className="mx-auto flex max-w-screen-xl flex-col">
+        <div className="flex flex-col items-center justify-center gap-10 px-6 py-8 lg:flex-row lg:gap-14 lg:px-0">
           <div className="max-height-[510px] flex max-w-[368px] flex-col items-center rounded-lg border-2 border-orange-500 px-12 py-16">
             <div className="flex flex-col items-center gap-2">
               <span className="h-20 w-20 rounded-md border bg-black"></span>
@@ -76,8 +75,8 @@ export default function Eletricista() {
               Entrar em contato
             </Button>
           </div>
-          <div className="flex max-w-[550px] flex-col gap-4">
-            <div className="max-w-[400px] rounded-lg bg-orange-300 p-3">
+          <div className="flex max-w-[550px] flex-col items-center justify-center gap-4 lg:items-start lg:justify-start">
+            <div className="max-w-[400px] rounded-lg bg-orange-300 p-3 text-center">
               <p className="font-medium text-[#EA580C]">
                 O melhor preço sem comprometer a qualidade!
               </p>
@@ -97,7 +96,7 @@ export default function Eletricista() {
             </div>
           </div>
         </div>
-        <div className="mx-auto my-10 flex max-w-screen-lg flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="mx-auto my-10 flex max-w-screen-lg flex-col gap-4 px-6 lg:flex-row lg:gap-8 lg:px-0 ">
           <Feature
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="Quais tipos de projetos elétricos a SOS Construir atende?"
@@ -109,7 +108,7 @@ export default function Eletricista() {
             description="Sim, todos os nossos eletricistas são profissionais certificados e qualificados, garantindo segurança e qualidade."
           />
         </div>
-        <div className="mx-auto mb-28 flex max-w-screen-lg flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="mx-auto mb-8 flex max-w-screen-lg flex-col gap-4 px-6 lg:mb-28 lg:flex-row lg:gap-8 lg:px-0">
           <Feature
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="O que é o padrão Copel?"
@@ -121,8 +120,8 @@ export default function Eletricista() {
             description="Para obter um orçamento, preencha o formulário de contato em nosso site."
           />
         </div>
-        <div className="flex flex-col items-center justify-center gap-1">
-          <h1 className="text-3xl font-bold text-[#EA580C]">
+        <div className="flex flex-col items-center justify-center gap-1 p-8 lg:px-0 lg:py-0">
+          <h1 className="text-center text-3xl font-bold text-[#EA580C]">
             Restou alguma dúvida?
           </h1>
           <p className="text-center font-semibold text-gray-700">

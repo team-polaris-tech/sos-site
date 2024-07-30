@@ -48,7 +48,7 @@ const testimonyList = [
 
 export default function Home() {
   return (
-    <div className="flex  flex-col items-center ">
+    <div className="mx-auto flex max-w-screen-xl flex-col items-center ">
       <section className="hidden items-center justify-between gap-8 py-16 lg:flex">
         <Feature
           icon={HardHat}
@@ -132,7 +132,7 @@ export default function Home() {
         />
       </section>
       <RequestQuoteForm />
-      <section className="flex flex-col items-center gap-2.5">
+      <section className="flex flex-col items-center gap-2.5 px-6 lg:px-0">
         <h2 className="text-4xl font-bold text-orange-500">
           Depoimentos SOS Construir
         </h2>

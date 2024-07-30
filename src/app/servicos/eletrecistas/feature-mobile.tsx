@@ -43,7 +43,7 @@ function Feature({
 export function FeatureMobile() {
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
-      '(max-width: 678px)': {
+      '(max-width: 800px)': {
         slides: { perView: 1, spacing: 10 },
         mode: 'snap',
       },
@@ -109,8 +109,7 @@ export function FeatureMobile() {
             />
           </div>
         </div>
-        {/* Botões de navegação com CaretLeft e CaretRight */}
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 transform md:-left-20 lg:-left-28">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 transform">
           <button onClick={handlePrevClick} className=" text-black">
             <CaretLeft
               className="md:size-16 lg:size-16"
@@ -119,7 +118,7 @@ export function FeatureMobile() {
             />
           </button>
         </div>
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 transform md:-right-20 lg:-right-28">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 transform">
           <button onClick={handleNextClick} className=" text-black">
             <CaretRight
               className="md:size-16 lg:size-16"
