@@ -144,7 +144,7 @@ export default function Home() {
           Junte-se a nós e faça parte dessa experiência de sucesso!
         </p>
       </section>
-      <Carousel items={testimonyList} type="testimony" />
+      <Carousel items={testimonyList} type="testimony" perView={3} />
     </div>
   )
 }

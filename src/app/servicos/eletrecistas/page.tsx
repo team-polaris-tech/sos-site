@@ -3,9 +3,11 @@ import {
   SealQuestion,
   WhatsappLogo,
 } from '@phosphor-icons/react/dist/ssr'
-import { Features } from './features'
+
 import Button from '../../../components/ui/button'
 import { ReactNode } from 'react'
+import { FeatureDesktop } from './feature-desktop'
+import { FeatureMobile } from './feature-mobile'
 
 function Feature({
   icon,
@@ -17,7 +19,7 @@ function Feature({
   description: string
 }) {
   return (
-    <div className="flex w-[500px] flex-col items-center gap-4">
+    <div className="flex w-full flex-col items-center gap-4 md:max-w-[500px]">
       <div className="flex gap-2">
         <div className="pt-1">{icon}</div>
         <div className="flex flex-col">
@@ -32,15 +34,16 @@ function Feature({
 export default function Eletricista() {
   return (
     <>
-      <Features />
+      <FeatureDesktop />
+      <FeatureMobile />
       <br />
       <section className="mx-auto flex max-w-screen-xl flex-col py-28">
-        <div className="flex w-full  items-center justify-center gap-20 pb-10">
+        <div className="flex flex-col items-center justify-center gap-20 pb-10 lg:flex-row">
           <div className="max-height-[510px] flex max-w-[368px] flex-col items-center rounded-lg border-2 border-orange-500 px-12 py-16">
             <div className="flex flex-col items-center gap-2">
               <span className="h-20 w-20 rounded-md border bg-black"></span>
               <h1 className="text-2xl font-bold text-[#EA580C]">
-                Sos Contruir
+                Sos Construir
               </h1>
             </div>
             <ul className="my-6 flex flex-col gap-3 font-medium text-gray-700">
@@ -80,7 +83,7 @@ export default function Eletricista() {
               </p>
             </div>
             <h1 className="text-2xl font-bold text-[#EA580C]">
-              Temos o Eletrecista certo para você
+              Temos o Eletricista certo para você
             </h1>
             <div className="flex flex-col justify-between gap-20">
               <p>
@@ -94,11 +97,11 @@ export default function Eletricista() {
             </div>
           </div>
         </div>
-        <div className="my-10 flex justify-center gap-4">
+        <div className="mx-auto my-10 flex max-w-screen-lg flex-col gap-4 lg:flex-row lg:gap-8">
           <Feature
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="Quais tipos de projetos elétricos a SOS Construir atende?"
-            description="Atendemos a uma variedade de projetos elétricos, incluindo residenciais, prediais seguindo o padrão Copel."
+            description="Atendemos a uma variedade de projetos elétricos, incluindo residenciais e prediais, seguindo o padrão Copel."
           />
           <Feature
             icon={<SealQuestion size={24} color="#EA580C" />}
@@ -106,7 +109,7 @@ export default function Eletricista() {
             description="Sim, todos os nossos eletricistas são profissionais certificados e qualificados, garantindo segurança e qualidade."
           />
         </div>
-        <div className="mb-28 flex justify-center gap-4">
+        <div className="mx-auto mb-28 flex max-w-screen-lg flex-col gap-4 lg:flex-row lg:gap-8">
           <Feature
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="O que é o padrão Copel?"
