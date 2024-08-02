@@ -29,10 +29,10 @@ export function ServiceCarousel({
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       breakpoints: {
-        '(max-width: 678px)': {
+        '(max-width: 800px)': {
           slides: { perView: 1, spacing: 5 },
         },
-        '(min-width: 679px)': {
+        '(min-width: 800px)': {
           slides: { perView, spacing: 10 },
         },
       },
@@ -75,7 +75,7 @@ export function ServiceCarousel({
   )
 
   return (
-    <div className="relative mx-auto max-w-screen-xl py-16">
+    <div className="relative mx-auto max-w-screen-md py-16 lg:max-w-screen-xl lg:py-16">
       <div ref={sliderRef} className="keen-slider overflow-hidden">
         {items.map((item, index) => (
           <div
@@ -114,7 +114,7 @@ export function ServiceCarousel({
       </div>
       {showArrows && (
         <>
-          <div className="absolute -left-7 top-1/2 -translate-y-1/2 transform md:-left-20 lg:-left-28">
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 transform ">
             <button onClick={() => instanceRef.current?.prev()}>
               <CaretLeft
                 className="md:size-16 lg:size-16"
@@ -123,7 +123,7 @@ export function ServiceCarousel({
               />
             </button>
           </div>
-          <div className="absolute -right-8 top-1/2 -translate-y-1/2 transform md:-right-20 lg:-right-28">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 transform">
             <button onClick={() => instanceRef.current?.next()}>
               <CaretRight
                 className="md:size-16 lg:size-16"

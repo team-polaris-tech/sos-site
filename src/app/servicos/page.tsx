@@ -14,8 +14,8 @@ const serviceImages = [
 export default function Servicos() {
   return (
     <>
-      <section className="px-6 sm:px-8 lg:mx-0 lg:px-0">
-        <div className="flex flex-col items-center justify-center gap-10 py-16 lg:flex-row">
+      <section className="sm:px-8 lg:mx-0 lg:px-0">
+        <div className="mb-14 flex flex-col items-center justify-center gap-14 p-6 lg:flex-row">
           <Image
             src="/servico.jpg"
             alt="serviço"

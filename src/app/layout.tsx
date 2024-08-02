@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="flex min-h-screen flex-col antialiased">
         <Header />
-        <main className="mx-auto w-full max-w-screen-xl flex-grow">
+        <main className="mx-auto my-32 w-full flex-grow lg:px-0">
           {children}
         </main>
         <Footer />

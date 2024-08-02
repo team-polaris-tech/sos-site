@@ -38,7 +38,7 @@ function Feature({
 
 export function FeatureDesktop() {
   return (
-    <section className="hidden flex-col bg-slate-800 py-16 text-white lg:flex lg:gap-16">
+    <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">
       <div className="flex flex-col items-center justify-between gap-6 p-4 lg:flex-row">
         <div className="flex flex-col items-center gap-4">
           <Feature
