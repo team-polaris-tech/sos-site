@@ -20,7 +20,7 @@ interface CarouselProps {
   perView: number
 }
 
-export function Carousel({
+export function ServiceCarousel({
   items,
   type,
   showArrows = false,
@@ -33,7 +33,7 @@ export function Carousel({
           slides: { perView: 1, spacing: 5 },
         },
         '(min-width: 679px)': {
-          slides: { perView: 3, spacing: 10 },
+          slides: { perView, spacing: 10 },
         },
       },
       slides: { perView },
@@ -114,14 +114,22 @@ export function Carousel({
       </div>
       {showArrows && (
         <>
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 transform">
+          <div className="absolute -left-7 top-1/2 -translate-y-1/2 transform md:-left-20 lg:-left-28">
             <button onClick={() => instanceRef.current?.prev()}>
-              <CaretLeft size={64} color="#EA580C" />
+              <CaretLeft
+                className="md:size-16 lg:size-16"
+                color="#EA580C"
+                size={32}
+              />
             </button>
           </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 transform">
+          <div className="absolute -right-8 top-1/2 -translate-y-1/2 transform md:-right-20 lg:-right-28">
             <button onClick={() => instanceRef.current?.next()}>
-              <CaretRight size={64} color="#EA580C" />
+              <CaretRight
+                className="md:size-16 lg:size-16"
+                color="#EA580C"
+                size={32}
+              />
             </button>
           </div>
         </>

@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer className="flex w-full max-w-screen-xl flex-col justify-between bg-slate-800 px-6 lg:px-8">
+    <footer className="mx-auto flex w-full  flex-col justify-between bg-slate-800 px-6 lg:px-8">
       <div className="grid grid-cols-3 gap-6 py-16">
         <div className="col-span-3 flex flex-col gap-2 lg:col-span-1">
           <h3 className="text-2xl font-bold text-white">Sos Construir</h3>

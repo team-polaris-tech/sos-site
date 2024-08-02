@@ -10,12 +10,41 @@ import {
   Ruler,
   Gear,
 } from '@phosphor-icons/react/dist/ssr'
-import { TestimonyCarousel } from '@/components/testimony-carousel'
+
 import { RequestQuoteForm } from '@/components/request-quote-form'
+import { Carousel } from '../../components/testimony-carousel'
 
 export const metadata: Metadata = {
   title: 'Home',
 }
+
+const testimonyList = [
+  {
+    name: 'Denise PC',
+    comment: '"Atendimento muito bom!"',
+    stars: 5,
+  },
+  {
+    name: 'Denise PC',
+    comment: '"Atendimento muito bom!"',
+    stars: 5,
+  },
+  {
+    name: 'Denise PC',
+    comment: '"Atendimento muito bom!"',
+    stars: 5,
+  },
+  {
+    name: 'Riad PC',
+    comment: '"Atendimento muito bom!"',
+    stars: 5,
+  },
+  {
+    name: 'Laercio PC',
+    comment: '"Atendimento muito bom!"',
+    stars: 5,
+  },
+]
 
 export default function Home() {
   return (
@@ -115,7 +144,7 @@ export default function Home() {
           Junte-se a nós e faça parte dessa experiência de sucesso!
         </p>
       </section>
-      <TestimonyCarousel />
+      <Carousel items={testimonyList} type="testimony" perView={3} />
     </div>
   )
 }
