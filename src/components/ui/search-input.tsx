@@ -1,12 +1,19 @@
 import { MagnifyingGlass } from '@phosphor-icons/react/dist/ssr'
 
-export default function SearchInput() {
+interface SearchInputProps {
+  value: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export default function SearchInput({ value, onChange }: SearchInputProps) {
   return (
-    <div className="relative hidden w-full lg:block lg:w-1/4">
+    <div className="relative">
       <input
         type="text"
         placeholder="Pesquisar"
-        className="w-full rounded-md border py-2 pl-10 pr-4 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-orange-500"
+        value={value}
+        onChange={onChange}
+        className="rounded-md border py-2 pl-10 pr-4 text-black placeholder-black focus:outline-none focus:ring-0"
       />
       <MagnifyingGlass
         size={24}

@@ -18,6 +18,7 @@ interface CarouselProps {
   type: 'testimony' | 'service'
   showArrows?: boolean
   perView: number
+  imageSize?: number
 }
 
 export function ServiceCarousel({
@@ -25,15 +26,16 @@ export function ServiceCarousel({
   type,
   showArrows = false,
   perView,
+  imageSize = 200,
 }: CarouselProps) {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
       breakpoints: {
-        '(max-width: 800px)': {
-          slides: { perView: 1, spacing: 5 },
+        '(max-width: 767px)': {
+          slides: { perView: 1, spacing: 0 },
         },
-        '(min-width: 800px)': {
-          slides: { perView, spacing: 10 },
+        '(min-width: 769px)': {
+          slides: { perView, spacing: 0 },
         },
       },
       slides: { perView },
@@ -75,7 +77,7 @@ export function ServiceCarousel({
   )
 
   return (
-    <div className="relative mx-auto max-w-screen-md py-16 lg:max-w-screen-xl lg:py-16">
+    <div className="relative mx-auto w-full max-w-screen-md py-16 lg:max-w-screen-xl">
       <div ref={sliderRef} className="keen-slider overflow-hidden">
         {items.map((item, index) => (
           <div
@@ -86,11 +88,10 @@ export function ServiceCarousel({
               <Image
                 src={item.src!}
                 alt={item.alt!}
-                width={400}
-                height={300}
+                width={imageSize}
+                height={imageSize}
                 quality={100}
                 priority
-                layout="responsive"
                 className="object-cover"
               />
             ) : (
