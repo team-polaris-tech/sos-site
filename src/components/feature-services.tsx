@@ -25,11 +25,13 @@ export default function FeatureServices({
 }: Props) {
   return (
     <div className="flex w-full flex-col items-center gap-4 md:max-w-[500px]">
-      {iconPosition === 'column' && <div className="pt-1">{icon}</div>}
+      {iconPosition === 'column' && (
+        <div className="flex justify-center pt-1">{icon}</div>
+      )}
       <div className="flex gap-2">
         {iconPosition === 'flex' && <div className="pt-1">{icon}</div>}
         <div className="flex flex-col gap-2">
-          <div className="text-2xl font-medium">{title}</div>
+          <div className="text-2xl font-medium text-orange-500">{title}</div>
           <div className="max-w-[300px] text-base">{description}</div>
           {price && (
             <div

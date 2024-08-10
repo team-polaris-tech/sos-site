@@ -140,7 +140,7 @@ export default function Eletricista() {
             </div>
           </div>
         </div>
-        <div className="mx-auto my-10 flex max-w-screen-lg flex-col gap-4 px-6 lg:flex-row lg:gap-8 lg:px-0 ">
+        <div className="my-10 flex w-full flex-col justify-center gap-4 px-6 lg:flex-row lg:gap-8 lg:px-0">
           <FeatureServices
             iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}
@@ -154,7 +154,7 @@ export default function Eletricista() {
             description="Sim, todos os nossos eletricistas são profissionais certificados e qualificados, garantindo segurança e qualidade."
           />
         </div>
-        <div className="mx-auto mb-8 flex max-w-screen-lg flex-col gap-4 px-6 lg:mb-28 lg:flex-row lg:gap-8 lg:px-0">
+        <div className="mb-8 flex w-full flex-col justify-center gap-4 px-6 lg:mb-28 lg:flex-row lg:gap-8 lg:px-0">
           <FeatureServices
             iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}

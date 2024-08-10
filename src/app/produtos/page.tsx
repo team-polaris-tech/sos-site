@@ -1,3 +1,4 @@
+'use client'
 import {
   CaretRight,
   Certificate,
@@ -11,7 +12,7 @@ import Link from 'next/link'
 import { Feature } from '../../components/feature'
 import Button from '../../components/ui/button'
 import FeatureServices from '../../components/feature-services'
-import SearchInput from '../../components/ui/search-input'
+// import SearchInput from '../../components/ui/search-input'
 
 export default function Produtos() {
   return (
@@ -68,7 +69,7 @@ export default function Produtos() {
         {/* Desktop Desktop Desktop */}
         <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">
           <div className="w-full lg:flex lg:justify-center">
-            <SearchInput />
+            {/* <SearchInput /> */}
           </div>
           <div className="flex flex-col items-center justify-between gap-6 p-4 lg:flex-row">
             <div className="flex flex-col items-center gap-4 text-center">
