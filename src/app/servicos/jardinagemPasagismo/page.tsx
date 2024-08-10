@@ -12,9 +12,9 @@ import {
 
 import Button from '../../../components/ui/button'
 import FeatureServices from '../../../components/feature-services'
-import { CarouselElectricianMobile } from './carousel-electrician-mobile'
+import { CarouselElectricianMobile } from '../eletrecistas/carousel-electrician-mobile'
 
-export default function Eletricista() {
+export default function JardinagemPasagismo() {
   return (
     <>
       <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">

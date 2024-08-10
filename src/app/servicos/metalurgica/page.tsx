@@ -12,9 +12,9 @@ import {
 
 import Button from '../../../components/ui/button'
 import FeatureServices from '../../../components/feature-services'
-import { CarouselElectricianMobile } from './carousel-electrician-mobile'
+import { CarouselMetallurgyMobile } from './carousel-metarllurgy-mobile'
 
-export default function Eletricista() {
+export default function Metalurgica() {
   return (
     <>
       <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">
@@ -79,7 +79,7 @@ export default function Eletricista() {
           </div>
         </div>
       </section>
-      <CarouselElectricianMobile />
+      <CarouselMetallurgyMobile />
       <section className="mx-auto flex max-w-screen-xl flex-col">
         <div className="flex flex-col items-center justify-center gap-10 px-6 py-8 lg:flex-row lg:gap-14 lg:px-0">
           <div className="max-height-[510px] flex max-w-[368px] flex-col items-center rounded-lg border-2 border-orange-500 px-12 py-16">

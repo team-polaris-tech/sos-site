@@ -58,7 +58,7 @@ const features: FeatureData[] = [
   },
 ]
 
-export function CarouselBenefitsMobile() {
+export function CarouselDecorativeStoneMobile() {
   return (
     <section className="bg-slate-800 py-16 text-center text-white lg:hidden">
       <Carousel
