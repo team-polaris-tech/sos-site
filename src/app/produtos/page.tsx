@@ -1,3 +1,4 @@
+'use client'
 import {
   CaretRight,
   Certificate,
@@ -8,10 +9,10 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FeatureProducts } from './feature-desktop'
-import FeatureMobile from './feature-mobile'
 import { Feature } from '../../components/feature'
 import Button from '../../components/ui/button'
+import FeatureServices from '../../components/feature-services'
+// import SearchInput from '../../components/ui/search-input'
 
 export default function Produtos() {
   return (
@@ -65,26 +66,177 @@ export default function Produtos() {
             </div>
           </div>
         </div>
-        <FeatureProducts />
-        <FeatureMobile />
+        {/* Desktop Desktop Desktop */}
+        <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">
+          <div className="w-full lg:flex lg:justify-center">
+            {/* <SearchInput /> */}
+          </div>
+          <div className="flex flex-col items-center justify-between gap-6 p-4 lg:flex-row">
+            <div className="flex flex-col items-center gap-4 text-center">
+              <div>
+                <Image
+                  src="/tijolo.jpg"
+                  alt="tijolo"
+                  width={300}
+                  height={300}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 0,00"
+                borderColor="orange"
+                showLink
+              />
+            </div>
+            <div className="flex flex-col items-center gap-4 text-center">
+              <div>
+                <Image
+                  src="/tijolo.jpg"
+                  alt="tijolo"
+                  width={300}
+                  height={300}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 0,00"
+                borderColor="orange"
+                showLink
+              />
+            </div>
+            <div className="flex flex-col items-center gap-4 text-center">
+              <div>
+                <Image
+                  src="/tijolo.jpg"
+                  alt="tijolo"
+                  width={300}
+                  height={300}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 0,00"
+                borderColor="orange"
+                showLink
+              />
+            </div>
+          </div>
+        </section>
+        {/*  Mobile Mobile Mobile */}
+        <section className="flex-col bg-slate-800 py-16 text-white lg:hidden">
+          <div className="block pb-10 text-center lg:hidden">
+            <Link href="#">
+              Veja mais produtos <br /> como esse
+            </Link>
+          </div>
+          <div className="flex flex-col items-start justify-between gap-6 p-8">
+            <div className="flex gap-2">
+              <Image
+                src="/eletrecista.jpg"
+                alt="tijolo"
+                width={90}
+                height={50}
+                className="object-cover"
+                quality={100}
+                priority
+              />
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 5,00"
+                showPriceIcon
+                borderColor="transparent"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-between gap-6 p-8">
+            <div className="flex gap-2">
+              <Image
+                src="/eletrecista.jpg"
+                alt="tijolo"
+                width={90}
+                height={50}
+                className="object-cover"
+                quality={100}
+                priority
+              />
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 20,00"
+                showPriceIcon
+                borderColor="transparent"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-between gap-6 p-8">
+            <div className="flex gap-2">
+              <Image
+                src="/eletrecista.jpg"
+                alt="tijolo"
+                width={90}
+                height={50}
+                className="object-cover"
+                quality={100}
+                priority
+              />
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 10,00"
+                showPriceIcon
+                borderColor="transparent"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-between gap-6 p-8">
+            <div className="flex gap-2">
+              <Image
+                src="/eletrecista.jpg"
+                alt="tijolo"
+                width={90}
+                height={50}
+                className="object-cover"
+                quality={100}
+                priority
+              />
+              <FeatureServices
+                title="Melhor preço"
+                description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+                price="R$ 39,90"
+                showPriceIcon
+                borderColor="transparent"
+              />
+            </div>
+          </div>
+        </section>
         <section className="flex flex-col items-center justify-between gap-8 text-wrap px-6 py-8 lg:flex-row lg:gap-8 lg:px-52 lg:py-16">
           <div className="max-w-[250px]">
             <Feature
-              icon={Tree}
+              icon={<Tree size={32} />}
               title="Fabricação ecológica"
               description="A SOS dedica-se à constante capacitação e atualização de seus parceiros!"
             />
           </div>
           <div className="max-w-[250px]">
             <Feature
-              icon={ShieldCheck}
+              icon={<ShieldCheck size={32} />}
               title="Padrão de qualidade"
               description="Elimine as preocupações com a execução do projeto."
             />
           </div>
           <div className="max-w-[250px]">
             <Feature
-              icon={Certificate}
+              icon={<Certificate size={32} />}
               title="Tijolo certificado"
               description="A SOS é reconhecida por oferecer serviços de alta qualidade a preços competitivos!"
             />

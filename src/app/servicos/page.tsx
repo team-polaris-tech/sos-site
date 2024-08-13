@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CaretRight, SealCheck } from '@phosphor-icons/react/dist/ssr'
 import Eletricista from './eletrecistas/page'
-import { ServiceCarousel } from '../../components/service-carousel'
+import { ServiceCarousel } from '../../components/carousel/service-carousel'
 
 const serviceImages = [
   { src: '/eletrecista.jpg', alt: 'Service 1' },

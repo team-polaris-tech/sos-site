@@ -1,6 +1,6 @@
+'use client'
 import { Feature } from '@/components/feature'
 
-import { Metadata } from 'next'
 import Image from 'next/image'
 import {
   HardHat,
@@ -12,11 +12,11 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 import { RequestQuoteForm } from '@/components/request-quote-form'
-import { Carousel } from '../../components/testimony-carousel'
-
-export const metadata: Metadata = {
-  title: 'Home',
-}
+import SearchInput from '../../components/ui/search-input'
+import { ServiceCarousel } from '../../components/carousel/service-carousel'
+import { FeatureHomeMobile } from './carousel-benefits-mobile'
+import { CarouselFilter } from './carousel-filter'
+import { useState } from 'react'
 
 const testimonyList = [
   {
@@ -47,26 +47,65 @@ const testimonyList = [
 ]
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState('')
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value)
+  }
+
   return (
     <div className="mx-auto flex max-w-screen-xl flex-col items-center ">
+      <section className="flex flex-col items-center justify-center gap-8 lg:flex-row">
+        <div className="flex flex-col gap-4 text-center lg:text-left">
+          <h1 className="text-4xl font-bold text-orange-500 lg:text-6xl">
+            Sos Construir
+          </h1>
+          <SearchInput value={searchTerm} onChange={handleSearchChange} />
+          <span>
+            <h3 className="text-xl font-semibold lg:text-3xl">
+              Encontre serviços
+            </h3>
+            <p className="text-sm lg:text-base">
+              Para auxiliarem você no dia a dia
+            </p>
+          </span>
+          <CarouselFilter searchTerm={searchTerm} />
+          <span>
+            <h1 className="text-xl font-semibold lg:text-3xl">Ou produtos</h1>
+            <p className="text-sm lg:text-base">Que você precisa</p>
+          </span>
+          <CarouselFilter searchTerm={searchTerm} />
+        </div>
+        <div className="hidden lg:block">
+          <Image
+            src={'/arquiteto.jpg'}
+            alt="serviço"
+            width={500}
+            height={500}
+            quality={100}
+            priority
+            className="object-cover"
+          />
+        </div>
+      </section>
       <section className="hidden items-center justify-between gap-8 py-16 lg:flex">
         <Feature
-          icon={HardHat}
+          icon={<HardHat size={32} />}
           title="Profissionais capacitados"
           description="A SOS dedica-se à constante capacitação e atualização de seus parceiros!"
         />
         <Feature
-          icon={TrafficCone}
+          icon={<TrafficCone size={32} />}
           title="Projeto sem dor de cabeça"
           description="Elimine as preocupações com a execução do projeto."
         />
         <Feature
-          icon={MoneyWavy}
+          icon={<MoneyWavy size={32} />}
           title="Os melhores preços"
           description="A SOS é reconhecida por oferecer serviços de alta qualidade a preços competitivos!"
         />
         <Feature
-          icon={Target}
+          icon={<Target size={32} />}
           title="Entrega no prazo"
           description="A SOS prioriza a pontualidade e assegura o cumprimento dos prazos na entrega de projetos!"
         />
@@ -109,30 +148,33 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className="relative w-full lg:hidden">
+        <FeatureHomeMobile />
+      </section>
       <section className="hidden items-center justify-between gap-8 py-16 lg:flex">
         <Feature
-          icon={Ruler}
+          icon={<Ruler size={32} />}
           title="Planejamento do Projeto"
           description="Oferecemos orientações para um planejamento cuidadoso do seu projeto, do início ao fim."
         />
         <Feature
-          icon={TrafficCone}
+          icon={<TrafficCone size={32} />}
           title="Reformas"
           description="Cuidamos de cada detalhe, desde pequenos ajustes até reformas completas, para um resultado final impecável."
         />
         <Feature
-          icon={HardHat}
+          icon={<HardHat size={32} />}
           title="Especialistas"
           description="Equipe de profissionais qualificados, prontos para soluções personalizadas para seu projeto."
         />
         <Feature
-          icon={Gear}
+          icon={<Gear size={32} />}
           title="Garantia"
           description="Oferecemos uma garantia completa em todos os trabalhos realizados."
         />
       </section>
       <RequestQuoteForm />
-      <section className="flex flex-col items-center gap-2.5 px-6 lg:px-0">
+      <section className="flex flex-col items-center gap-2.5 p-6 text-center lg:px-2">
         <h2 className="text-4xl font-bold text-orange-500">
           Depoimentos SOS Construir
         </h2>
@@ -144,7 +186,7 @@ export default function Home() {
           Junte-se a nós e faça parte dessa experiência de sucesso!
         </p>
       </section>
-      <Carousel items={testimonyList} type="testimony" perView={3} />
+      <ServiceCarousel items={testimonyList} type="testimony" perView={3} />
     </div>
   )
 }

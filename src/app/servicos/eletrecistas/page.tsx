@@ -1,41 +1,85 @@
 import {
+  Cloud,
+  CurrencyCircleDollar,
   SealCheck,
   SealQuestion,
+  Speedometer,
+  Tag,
+  Target,
+  Users,
   WhatsappLogo,
 } from '@phosphor-icons/react/dist/ssr'
 
 import Button from '../../../components/ui/button'
-import { ReactNode } from 'react'
-import { FeatureDesktop } from './feature-desktop'
-import { FeatureMobile } from './feature-mobile'
-
-function Feature({
-  icon,
-  description,
-  title,
-}: {
-  icon: ReactNode
-  title: string
-  description: string
-}) {
-  return (
-    <div className="flex w-full flex-col items-center gap-4 md:max-w-[500px]">
-      <div className="flex gap-2">
-        <div className="pt-1">{icon}</div>
-        <div className="flex flex-col">
-          <div className="text-base font-medium text-[#EA580C]">{title}</div>
-          <div className="font-semibold">{description}</div>
-        </div>
-      </div>
-    </div>
-  )
-}
+import FeatureServices from '../../../components/feature-services'
+import { CarouselBenefitsMobile } from './carousel-benefits-mobile'
 
 export default function Eletricista() {
   return (
     <>
-      <FeatureDesktop />
-      <FeatureMobile />
+      <section className="mb-16 hidden flex-col bg-slate-800 px-52 py-16 text-white lg:flex lg:gap-16">
+        <div className="flex flex-col items-center justify-between gap-6 p-4 lg:flex-row">
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={
+                <CurrencyCircleDollar className="size-12" strokeWidth={1} />
+              }
+              title="Melhor preço"
+              description="Na SOS Construir, você encontra o melhor preço sem abrir mão da qualidade."
+              showLink
+            />
+          </div>
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={<Speedometer className="size-12" strokeWidth={1} />}
+              title="Entrega no Prazo"
+              description="SOS Construir: pontualidade é nosso compromisso."
+              showLink
+            />
+          </div>
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={<Target className="size-12" strokeWidth={1} />}
+              title="Resultados Perfeitos"
+              description="SOS Construir: Resultados perfeitos, sua satisfação garantida."
+              showLink
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-between gap-6 p-4 lg:flex-row">
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={<Tag className="size-12" strokeWidth={1} />}
+              title="Compromisso"
+              description="SOS Construir: Compromisso com excelência em cada projeto."
+              showLink
+            />
+          </div>
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={<Cloud className="size-12" strokeWidth={1} />}
+              title="Excelência"
+              description="SOS Construir: Excelência do começo ao fim."
+              showLink
+            />
+          </div>
+          <div className="flex w-[300px] flex-col items-center gap-4 text-center">
+            <FeatureServices
+              iconPosition="column"
+              icon={<Users className="size-12" strokeWidth={1} />}
+              title="Profissionais Experientes"
+              description="SOS Construir: Equipe com ampla experiência, qualidade assegurada."
+              showLink
+            />
+          </div>
+        </div>
+      </section>
+      <CarouselBenefitsMobile />
       <section className="mx-auto flex max-w-screen-xl flex-col">
         <div className="flex flex-col items-center justify-center gap-10 px-6 py-8 lg:flex-row lg:gap-14 lg:px-0">
           <div className="max-height-[510px] flex max-w-[368px] flex-col items-center rounded-lg border-2 border-orange-500 px-12 py-16">
@@ -96,25 +140,29 @@ export default function Eletricista() {
             </div>
           </div>
         </div>
-        <div className="mx-auto my-10 flex max-w-screen-lg flex-col gap-4 px-6 lg:flex-row lg:gap-8 lg:px-0 ">
-          <Feature
+        <div className="my-10 flex w-full flex-col justify-center gap-4 px-6 lg:flex-row lg:gap-8 lg:px-0">
+          <FeatureServices
+            iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="Quais tipos de projetos elétricos a SOS Construir atende?"
             description="Atendemos a uma variedade de projetos elétricos, incluindo residenciais e prediais, seguindo o padrão Copel."
           />
-          <Feature
+          <FeatureServices
+            iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="Nossos eletricistas são certificados?"
             description="Sim, todos os nossos eletricistas são profissionais certificados e qualificados, garantindo segurança e qualidade."
           />
         </div>
-        <div className="mx-auto mb-8 flex max-w-screen-lg flex-col gap-4 px-6 lg:mb-28 lg:flex-row lg:gap-8 lg:px-0">
-          <Feature
+        <div className="mb-8 flex w-full flex-col justify-center gap-4 px-6 lg:mb-28 lg:flex-row lg:gap-8 lg:px-0">
+          <FeatureServices
+            iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="O que é o padrão Copel?"
             description="O padrão Copel se refere às regulamentações e normas elétricas da Companhia Paranaense de Energia. Seguimos rigorosamente essas normas para garantir conformidade."
           />
-          <Feature
+          <FeatureServices
+            iconPosition="flex"
             icon={<SealQuestion size={24} color="#EA580C" />}
             title="Como posso solicitar um orçamento para serviços elétricos?"
             description="Para obter um orçamento, preencha o formulário de contato em nosso site."

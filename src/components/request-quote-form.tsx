@@ -33,7 +33,7 @@ export function RequestQuoteForm() {
   }
 
   return (
-    <section className="flex w-full items-start justify-between bg-slate-800 px-6 py-16 lg:bg-transparent">
+    <section className="flex w-full items-start justify-center gap-28 bg-slate-800 px-6 py-16 lg:bg-transparent">
       <form
         onSubmit={handleSubmit(handleSendQuote)}
         className="flex flex-col gap-3"
